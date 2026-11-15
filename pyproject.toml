@@ -1,0 +1,10 @@
+[project]
+name = "probespeak"
+version = "0.3.0"
+description = "ProbeSpeak desktop diagnosis console for AIORI PS-015"
+requires-python = ">=3.10"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "agent"]
+testpaths = ["tests", "agent/tests"]

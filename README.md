@@ -42,6 +42,17 @@ The order is fixed: measure, explain with evidence, ask permission, attempt a sa
 
 A full Python measuring-and-recovery agent lives in [`agent/`](agent/README.md). The `public/probespeak-agent.mjs` below is the minimal reference process.
 
+## Desktop application
+
+A PySide6 window uses that same rule engine. The website is unchanged.
+
+```bash
+python3 -m pip install -r requirements-desktop.txt
+PYTHONPATH=src:agent python3 -m probespeak
+```
+
+Lab scenarios do not touch this computer. Live recovery stays off until you allow it. Details, the comparison with the other PS-015 desktop projects, and the Windows build steps are in [docs/DESKTOP.md](docs/DESKTOP.md) and [docs/FEATURE_COMPARISON.md](docs/FEATURE_COMPARISON.md).
+
 
 Allowlist: `VERIFY_DNS`, `FIX_DNS`, `RESTORE_DNS`, `VERIFY_GATEWAY`, `RENEW_DHCP`, `RECONNECT_NETWORK`, `VERIFY_PACKET_LOSS`, `RETEST`.
 
